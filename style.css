@@ -1,0 +1,1977 @@
+/* =========================
+   GENERAL
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    background-color: #020914;
+    color: white;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+img,
+video {
+    max-width: 100%;
+}
+
+
+/* =========================
+   NAVIGATION BAR
+========================= */
+
+.navbar {
+    position: sticky;
+    top: 10px;
+    z-index: 1000;
+
+    width: 100%;
+    max-width: 1150px;
+
+    margin: 0 auto 30px;
+    padding: 16px 22px;
+
+    background: rgba(7, 21, 37, 0.95);
+
+    border: 1px solid #12385c;
+    border-radius: 15px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 25px;
+
+    box-shadow:
+        0 0 25px rgba(0, 140, 255, 0.12);
+
+    backdrop-filter: blur(10px);
+}
+
+
+/* LOGO */
+
+.logo {
+    color: #008cff;
+
+    font-size: 23px;
+    font-weight: bold;
+
+    white-space: nowrap;
+
+    text-shadow:
+        0 0 12px rgba(0, 140, 255, 0.5);
+}
+
+
+/* NAV LINKS */
+
+.nav-links {
+    display: flex;
+
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 18px;
+
+    flex-wrap: wrap;
+}
+
+
+.nav-links a {
+    position: relative;
+
+    color: #eeeeee;
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    padding: 6px 2px;
+
+    transition: 0.3s;
+}
+
+
+/* UNDERLINE EFFECT */
+
+.nav-links a::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 0;
+    height: 2px;
+
+    background: #008cff;
+
+    transition: 0.3s;
+}
+
+
+.nav-links a:hover {
+    color: #008cff;
+}
+
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    width: 100%;
+    max-width: 1000px;
+
+    margin: 30px auto 80px;
+    padding: 100px 30px;
+
+    text-align: center;
+
+    background-color: #071525;
+    border-radius: 0 35px 35px 35px;
+
+    box-shadow:
+        0 0 30px rgba(0, 140, 255, 0.05);
+}
+
+.hero-photo {
+    width: 180px;
+    height: 180px;
+
+    object-fit: cover;
+    border-radius: 50%;
+
+    display: block;
+    margin: 0 auto 30px;
+
+    border: 4px solid #008cff;
+
+    box-shadow:
+        0 0 25px #008cff;
+}
+
+.hero h1 {
+    color: #008cff;
+    font-size: clamp(38px, 5vw, 60px);
+
+    margin: 0 0 25px;
+
+    text-shadow:
+        0 0 25px #008cff;
+}
+
+.hero p {
+    font-size: clamp(18px, 2.5vw, 25px);
+    line-height: 1.8;
+
+    color: #eeeeee;
+
+    max-width: 750px;
+    margin: 20px auto;
+}
+
+.hero .tagline {
+    color: #008cff;
+    font-weight: bold;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+button {
+    background-color: #008cff;
+    color: white;
+
+    border: none;
+
+    padding: 16px 45px;
+
+    border-radius: 10px;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #006dcc;
+
+    transform: scale(1.05);
+
+    box-shadow:
+        0 0 20px rgba(0, 140, 255, 0.5);
+}
+
+.book-button {
+    display: inline-block;
+
+    margin-top: 15px;
+
+    padding: 10px 22px;
+
+    background-color: #008cff;
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.book-button:hover {
+    transform: scale(1.05);
+    background-color: #006dcc;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+    width: 100%;
+    max-width: 1000px;
+
+    margin: 0 auto 35px;
+    padding: 30px;
+
+    text-align: center;
+
+    background-color: #071525;
+
+    border-left: 3px solid #008cff;
+    border-radius: 10px;
+}
+
+.about h2 {
+    color: #008cff;
+    font-size: 30px;
+    margin-top: 0;
+}
+
+.about p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #dddddd;
+}
+
+.second-about {
+    margin-top: 70px;
+}
+
+.second-about h3 {
+    color: #008cff;
+    font-size: 30px;
+}
+
+
+/* =========================
+   TITLES
+========================= */
+
+.title {
+    width: 100%;
+    max-width: 1000px;
+
+    margin: 25px auto 15px;
+
+    color: #008cff;
+    font-size: 20px;
+}
+
+
+/* =========================
+   LINKS
+========================= */
+
+.facebook-link {
+    display: block;
+
+    width: 100%;
+    max-width: 1000px;
+
+    margin: 0 auto 25px;
+
+    color: #008cff;
+}
+
+
+/* =========================
+   SERVICES
+========================= */
+
+.services {
+    width: 100%;
+    max-width: 1000px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 14px;
+}
+
+.service {
+    background-color: #071525;
+
+    border: 2px solid #008cff;
+
+    border-radius: 15px;
+
+    padding: 25px;
+
+    transition: 0.3s;
+}
+
+.service:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 0 20px rgba(0, 140, 255, 0.3);
+}
+
+.service h3 {
+    color: #008cff;
+    font-size: 20px;
+    margin-top: 0;
+}
+
+.service p {
+    color: #cccccc;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   SKILLS
+========================= */
+
+.skills {
+    width: 100%;
+    max-width: 1000px;
+
+    margin: auto;
+}
+
+.skill {
+    background-color: #071525;
+
+    border: 1px solid #12385c;
+    border-left: 3px solid #008cff;
+
+    border-radius: 6px;
+
+    padding: 12px;
+    margin: 8px 0;
+
+    font-weight: bold;
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+.skill:hover {
+    border-color: #008cff;
+    transform: translateX(5px);
+}
+
+
+/* =========================
+   PRICING
+========================= */
+
+.pricing-section {
+    width: 100%;
+
+    margin-top: 70px;
+    padding: 20px;
+
+    text-align: center;
+}
+
+.pricing-section h2 {
+    color: #008cff;
+
+    font-size: clamp(28px, 4vw, 35px);
+
+    margin-bottom: 10px;
+}
+
+.pricing-intro {
+    color: #ccc;
+    margin-bottom: 35px;
+}
+
+.pricing-container {
+    width: 100%;
+    max-width: 1000px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 25px;
+}
+
+.price-card {
+    background: #0b1422;
+
+    border: 1px solid #008cff;
+
+    border-radius: 15px;
+
+    padding: 25px;
+
+    transition: 0.3s;
+}
+
+.price-card:hover {
+    transform: translateY(-8px);
+}
+
+.price-card h3 {
+    color: #008cff;
+    font-size: 22px;
+}
+
+.price-card h4 {
+    color: #aaa;
+    margin-top: 25px;
+}
+
+.price {
+    color: white;
+
+    font-size: 30px;
+    font-weight: bold;
+
+    margin: 15px 0;
+}
+
+.price-card p {
+    color: #ddd;
+    line-height: 1.7;
+}
+
+
+/* =========================
+   BOOKING FORM
+========================= */
+
+.booking-section {
+    width: 100%;
+    max-width: 700px;
+
+    margin: 80px auto;
+
+    padding: 35px 30px;
+
+    background: #071525;
+
+    border: 1px solid #12385c;
+    border-radius: 18px;
+
+    box-shadow:
+        0 0 25px rgba(0, 140, 255, 0.12);
+}
+
+.booking-section h2 {
+    text-align: center;
+
+    color: #008cff;
+
+    font-size: 32px;
+
+    margin-bottom: 15px;
+}
+
+.booking-section > p {
+    text-align: center;
+
+    color: #cccccc;
+
+    line-height: 1.6;
+
+    margin-bottom: 35px;
+}
+
+#bookingForm {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+#bookingForm label {
+    font-size: 18px;
+    font-weight: bold;
+
+    margin-top: 10px;
+}
+
+#bookingForm input,
+#bookingForm select,
+#bookingForm textarea {
+    width: 100%;
+
+    padding: 14px;
+
+    border: 1px solid #008cff;
+    border-radius: 8px;
+
+    background-color: #ffffff;
+    color: #111111;
+
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+#bookingForm input:focus,
+#bookingForm select:focus,
+#bookingForm textarea:focus {
+    border-color: #00aaff;
+
+    box-shadow:
+        0 0 10px rgba(0, 140, 255, 0.25);
+}
+
+#bookingForm textarea {
+    resize: vertical;
+    min-height: 130px;
+}
+
+#bookingForm button {
+    width: 100%;
+
+    margin-top: 20px;
+
+    padding: 15px;
+
+    border: none;
+    border-radius: 10px;
+
+    background-color: #008cff;
+    color: white;
+
+    font-size: 20px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+#bookingForm button:hover {
+    transform: scale(1.02);
+
+    background-color: #006dcc;
+}
+
+
+/* =========================
+   PROJECTS
+========================= */
+
+.projects-section {
+    width: 100%;
+    max-width: 1100px;
+
+    margin: 80px auto;
+
+    padding: 20px;
+
+    text-align: center;
+}
+
+.projects-section h2 {
+    color: #008cff;
+
+    font-size: clamp(30px, 4vw, 40px);
+
+    margin-bottom: 10px;
+
+    text-shadow: 0 0 15px rgba(0, 140, 255, 0.4);
+}
+
+.projects-subtitle {
+    color: #aaa;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+
+    max-width: 700px;
+
+    margin: 0 auto 45px;
+}
+
+
+/* PROJECT GRID */
+
+.projects-container {
+
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 25px;
+}
+
+
+/* PROJECT CARD */
+
+.projects-container .project-card {
+
+    width: 100%;
+
+    min-height: 100%;
+
+    padding: 28px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #0b1828,
+            #07111d
+        );
+
+    border: 1px solid #12385c;
+
+    border-radius: 18px;
+
+    text-align: left;
+
+    position: relative;
+
+    overflow: hidden;
+
+    transition: 0.35s ease;
+
+    box-shadow:
+        0 0 15px rgba(0, 140, 255, 0.08);
+}
+
+/* GLOW EFFECT */
+
+.projects-container .project-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 3px;
+
+    background: #008cff;
+
+    box-shadow:
+        0 0 15px #008cff;
+}
+
+
+.projects-container .project-card:hover {
+
+    transform: translateY(-8px);
+
+    border-color: #008cff;
+
+    box-shadow:
+        0 10px 35px rgba(0, 140, 255, 0.2);
+}
+
+
+/* PROJECT ICON */
+
+.project-icon {
+
+    width: 65px;
+    height: 65px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #071525;
+
+    border: 1px solid #12385c;
+
+    border-radius: 15px;
+
+    font-size: 32px;
+
+    margin-bottom: 20px;
+
+    box-shadow:
+        0 0 15px rgba(0, 140, 255, 0.12);
+}
+
+
+/* PROJECT TITLE */
+
+.projects-container .project-card h3 {
+
+    color: #008cff;
+
+    font-size: 25px;
+
+    margin: 0 0 15px;
+}
+
+
+/* PROJECT TEXT */
+
+.projects-container .project-card p {
+
+    color: #d5d5d5;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+    margin-bottom: 18px;
+}
+
+
+/* PROJECT SUBTITLE */
+
+.projects-container .project-card h4 {
+
+    color: #00aaff;
+
+    font-size: 18px;
+
+    margin-top: 25px;
+
+    margin-bottom: 10px;
+}
+
+
+/* PROJECT TAGS */
+
+.project-tags {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin: 20px 0;
+}
+
+
+.project-tags span {
+
+    padding: 7px 12px;
+
+    background: #071525;
+
+    color: #00aaff;
+
+    border: 1px solid #12385c;
+
+    border-radius: 20px;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+
+.project-tags span:hover {
+
+    border-color: #008cff;
+
+    background: #0a2038;
+
+    transform: translateY(-2px);
+}
+
+
+/* PROJECT BUTTON */
+
+.project-button {
+
+    display: inline-block;
+
+    margin-top: 10px;
+
+    padding: 11px 20px;
+
+    background: #008cff;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+
+.project-button:hover {
+
+    background: #006dcc;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 0 18px rgba(0, 140, 255, 0.4);
+}
+
+
+/* =========================
+   WHATSAPP
+========================= */
+
+.whatsapp-button {
+    display: block;
+
+    width: fit-content;
+
+    max-width: 100%;
+
+    margin: 25px auto;
+
+    padding: 13px 25px;
+
+    background-color: #25D366;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 8px;
+
+    font-size: 17px;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.whatsapp-button:hover {
+    transform: scale(1.05);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    margin-top: 70px;
+
+    padding: 30px;
+
+    text-align: center;
+
+    background-color: #071525;
+
+    color: #888;
+
+    border-radius: 10px;
+}
+
+
+/* =====================================================
+   TABLET
+   601px - 900px
+===================================================== */
+
+@media (min-width: 601px) and (max-width: 900px) {
+
+    body {
+        padding: 15px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .hero {
+        padding: 75px 25px;
+    }
+
+    .hero-photo {
+        width: 160px;
+        height: 160px;
+    }
+
+    .services {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .pricing-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .booking-section {
+        max-width: 650px;
+    }
+
+}
+
+
+/* =====================================================
+   IPAD PORTRAIT
+   768px - 1024px
+===================================================== */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    body {
+        padding: 18px;
+    }
+
+    .hero {
+        max-width: 900px;
+    }
+
+    .services {
+        max-width: 900px;
+    }
+
+    .pricing-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+   0px - 600px
+===================================================== */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 10px;
+    }
+
+
+    /* NAVBAR */
+
+.navbar {
+    position: relative;
+
+    width: 100%;
+
+    margin: 0 auto 25px;
+
+    padding: 14px 10px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 14px;
+
+    border-radius: 14px;
+}
+
+.logo {
+    font-size: 20px;
+
+    text-align: center;
+}
+
+.nav-links {
+    width: 100%;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 8px 14px;
+}
+
+.nav-links a {
+    font-size: 13px;
+
+    padding: 5px 2px;
+
+    white-space: nowrap;
+}
+
+    
+
+
+    /* HERO */
+
+.hero {
+    width: 100%;
+    max-width: 100%;
+
+    padding: 50px 15px;
+
+    margin: 10px auto 40px;
+
+    text-align: center;
+
+    border-radius: 0 25px 25px 25px;
+}
+
+.hero-photo {
+    width: 135px;
+    height: 135px;
+
+    display: block;
+
+    margin: 0 auto 22px;
+
+    object-fit: cover;
+
+    border-width: 3px;
+}
+
+.hero h1 {
+    font-size: clamp(32px, 10vw, 40px);
+
+    line-height: 1.2;
+
+    margin-bottom: 18px;
+}
+
+.hero p {
+    max-width: 100%;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+
+    margin: 15px auto;
+}
+
+    /* ABOUT */
+
+.about {
+    width: 100%;
+    max-width: 100%;
+
+    margin: 0 auto 30px;
+
+    padding: 20px 15px;
+
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 26px;
+
+    margin-bottom: 15px;
+}
+
+.about p {
+    font-size: 16px;
+
+    line-height: 1.7;
+
+    margin: 0;
+}
+
+
+ /* SERVICES */
+
+.services {
+    width: 100%;
+    max-width: 100%;
+
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 15px;
+}
+
+.service {
+    width: 100%;
+
+    padding: 20px;
+
+    border-radius: 15px;
+}
+
+.service h3 {
+    font-size: 19px;
+
+    margin-bottom: 10px;
+}
+
+.service p {
+    font-size: 15px;
+
+    line-height: 1.7;
+
+    margin: 0;
+}
+
+
+    /* SKILLS */
+
+.skills {
+    width: 100%;
+    max-width: 100%;
+}
+
+.skill {
+    width: 100%;
+
+    padding: 11px 12px;
+
+    margin: 8px 0;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+
+    border-radius: 7px;
+}
+
+
+    /* PRICING */
+
+.pricing-section {
+    width: 100%;
+
+    margin-top: 50px;
+
+    padding: 10px;
+}
+
+.pricing-section h2 {
+    font-size: 28px;
+
+    line-height: 1.3;
+}
+
+.pricing-intro {
+    font-size: 15px;
+
+    line-height: 1.6;
+
+    margin-bottom: 25px;
+}
+
+.pricing-container {
+    width: 100%;
+
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+}
+
+.price-card {
+    width: 100%;
+
+    padding: 22px 18px;
+
+    border-radius: 15px;
+}
+
+.price-card h3 {
+    font-size: 21px;
+}
+
+.price-card h4 {
+    font-size: 16px;
+}
+
+.price {
+    font-size: 28px;
+}
+
+.price-card p {
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+
+    /* =========================
+   BOOKING
+========================= */
+
+.booking-section {
+    width: 100%;
+    max-width: 100%;
+
+    margin: 50px auto;
+
+    padding: 25px 15px;
+
+    border-radius: 15px;
+}
+
+.booking-section h2 {
+    font-size: 27px;
+
+    line-height: 1.3;
+
+    margin-bottom: 12px;
+}
+
+.booking-section > p {
+    font-size: 15px;
+
+    line-height: 1.7;
+
+    margin-bottom: 25px;
+}
+
+#bookingForm {
+    width: 100%;
+
+    gap: 8px;
+}
+
+#bookingForm label {
+    font-size: 16px;
+
+    margin-top: 10px;
+}
+
+#bookingForm input,
+#bookingForm select,
+#bookingForm textarea {
+    width: 100%;
+
+    padding: 13px;
+
+    font-size: 16px;
+
+    border-radius: 8px;
+}
+
+#bookingForm textarea {
+    min-height: 120px;
+}
+
+#bookingForm button {
+    width: 100%;
+
+    margin-top: 18px;
+
+    padding: 14px;
+
+    font-size: 18px;
+
+    border-radius: 9px;
+}
+
+
+/* =========================
+   PROJECTS
+========================= */
+
+.projects-section {
+    width: 100%;
+    max-width: 100%;
+
+    margin: 50px auto;
+
+    padding: 10px;
+
+    text-align: center;
+}
+
+.projects-section h2 {
+    font-size: 30px;
+
+    line-height: 1.3;
+}
+
+.projects-subtitle {
+    max-width: 100%;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+
+    margin-bottom: 30px;
+}
+
+.projects-container {
+    width: 100%;
+
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+}
+
+.projects-container .project-card {
+    width: 100%;
+
+    padding: 22px 18px;
+
+    border-radius: 16px;
+}
+
+.project-icon {
+    width: 58px;
+    height: 58px;
+
+    font-size: 28px;
+
+    margin-bottom: 18px;
+}
+
+.projects-container .project-card h3 {
+    font-size: 23px;
+
+    line-height: 1.3;
+}
+
+.projects-container .project-card p {
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+.projects-container .project-card h4 {
+    font-size: 17px;
+}
+
+.project-tags {
+    gap: 7px;
+}
+
+.project-tags span {
+    font-size: 12px;
+
+    padding: 6px 10px;
+}
+
+.project-button {
+    width: 100%;
+
+    text-align: center;
+
+    padding: 11px 15px;
+}
+
+
+    /* WHATSAPP */
+
+.whatsapp-button {
+    width: 100%;
+
+    max-width: 100%;
+
+    margin: 25px auto;
+
+    padding: 13px 20px;
+
+    text-align: center;
+
+    font-size: 16px;
+}
+
+
+    /* FOOTER */
+
+footer {
+    width: 100%;
+
+    margin-top: 50px;
+
+    padding: 25px 15px;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+}
+
+
+/* =====================================================
+   VERY SMALL PHONES
+   0px - 380px
+===================================================== */
+
+@media (max-width: 380px) {
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .hero-photo {
+        width: 120px;
+        height: 120px;
+    }
+
+    .nav-links {
+        gap: 8px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .price {
+        font-size: 25px;
+    }
+
+}
+/* =====================================================
+   DESKTOP / LAPTOP
+   1025px+
+===================================================== */
+
+@media (min-width: 1025px) {
+
+    /* NAVBAR */
+
+    .navbar {
+        max-width: 1150px;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        max-width: 1000px;
+    }
+
+
+    /* ABOUT */
+
+    .about {
+        max-width: 1000px;
+    }
+
+
+    /* SERVICES */
+
+    .services {
+        max-width: 1000px;
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 18px;
+    }
+
+
+    /* SKILLS */
+
+    .skills {
+        max-width: 1000px;
+    }
+
+
+    /* PRICING */
+
+    .pricing-container {
+        max-width: 1000px;
+
+        grid-template-columns:
+            repeat(4, minmax(0, 1fr));
+
+        gap: 20px;
+    }
+
+
+    /* BOOKING */
+
+    .booking-section {
+        max-width: 700px;
+    }
+
+
+    /* PROJECTS */
+
+    .projects-section {
+        max-width: 1100px;
+    }
+
+    .projects-container {
+        max-width: 1050px;
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 25px;
+    }
+
+    .projects-container .project-card {
+        padding: 28px;
+    }
+
+}
+/* =====================================================
+   TABLET
+   601px - 767px
+===================================================== */
+
+@media (min-width: 601px) and (max-width: 767px) {
+
+    body {
+        padding: 15px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 18px;
+    }
+
+    .nav-links {
+        width: 100%;
+        justify-content: center;
+        gap: 14px;
+    }
+
+    .hero {
+        padding: 70px 25px;
+    }
+
+    .hero-photo {
+        width: 155px;
+        height: 155px;
+    }
+
+    .services {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .pricing-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .projects-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+/* =====================================================
+   IPAD
+   768px - 1024px
+===================================================== */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    body {
+        padding: 18px;
+    }
+
+    .navbar {
+        max-width: 950px;
+    }
+
+    .hero {
+        max-width: 900px;
+        padding: 80px 30px;
+    }
+
+    .hero-photo {
+        width: 165px;
+        height: 165px;
+    }
+
+    .services {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .pricing-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .projects-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+    .projects-container .project-card {
+        padding: 25px;
+    }
+
+}
+/* =====================================================
+   MOBILE
+   0px - 600px
+===================================================== */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 10px;
+    }
+
+
+    /* NAVBAR */
+
+    .navbar {
+        position: relative;
+
+        width: 100%;
+
+        flex-direction: column;
+
+        gap: 15px;
+
+        padding: 15px 10px;
+
+        margin-bottom: 25px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .nav-links {
+        width: 100%;
+
+        justify-content: center;
+
+        gap: 9px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        width: 100%;
+
+        padding: 50px 15px;
+
+        margin-top: 10px;
+        margin-bottom: 40px;
+
+        border-radius: 0 25px 25px 25px;
+    }
+
+    .hero-photo {
+        width: 135px;
+        height: 135px;
+
+        border-width: 3px;
+    }
+
+    .hero h1 {
+        font-size: clamp(32px, 10vw, 40px);
+
+        line-height: 1.2;
+    }
+
+    .hero p {
+        font-size: 16px;
+
+        line-height: 1.7;
+    }
+
+
+    /* ABOUT */
+
+    .about {
+        padding: 20px 15px;
+    }
+
+    .about h2 {
+        font-size: 26px;
+    }
+
+    .about p {
+        font-size: 16px;
+
+        line-height: 1.7;
+    }
+
+
+    /* SERVICES */
+
+    .services {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+    }
+
+    .service {
+        padding: 20px;
+    }
+
+
+    /* SKILLS */
+
+    .skills {
+        width: 100%;
+    }
+
+    .skill {
+        font-size: 13px;
+
+        padding: 11px;
+    }
+
+
+    /* PRICING */
+
+    .pricing-section {
+        padding: 10px;
+
+        margin-top: 50px;
+    }
+
+    .pricing-container {
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+    }
+
+    .price-card {
+        padding: 22px 18px;
+    }
+
+    .price {
+        font-size: 28px;
+    }
+
+
+    /* BOOKING */
+
+    .booking-section {
+        width: 100%;
+
+        margin: 50px auto;
+
+        padding: 25px 15px;
+
+        border-radius: 15px;
+    }
+
+    .booking-section h2 {
+        font-size: 27px;
+    }
+
+    .booking-section > p {
+        font-size: 15px;
+    }
+
+    #bookingForm input,
+    #bookingForm select,
+    #bookingForm textarea {
+        font-size: 16px;
+
+        padding: 13px;
+    }
+
+    #bookingForm button {
+        font-size: 18px;
+
+        padding: 14px;
+    }
+
+
+    /* PROJECTS */
+
+    .projects-section {
+        width: 100%;
+
+        margin: 50px auto;
+
+        padding: 10px;
+    }
+
+    .projects-section h2 {
+        font-size: 30px;
+    }
+
+    .projects-subtitle {
+        font-size: 15px;
+
+        margin-bottom: 30px;
+    }
+
+    .projects-container {
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+    }
+
+    .projects-container .project-card {
+        padding: 22px 18px;
+    }
+
+    .projects-container .project-card h3 {
+        font-size: 23px;
+    }
+
+    .projects-container .project-card p {
+        font-size: 15px;
+
+        line-height: 1.7;
+    }
+
+    .project-icon {
+        width: 58px;
+        height: 58px;
+
+        font-size: 28px;
+    }
+
+    .project-tags span {
+        font-size: 12px;
+
+        padding: 6px 10px;
+    }
+
+    .project-button {
+        width: 100%;
+
+        text-align: center;
+    }
+
+
+    /* WHATSAPP */
+
+    .whatsapp-button {
+        width: 100%;
+
+        text-align: center;
+
+        font-size: 16px;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+        padding: 25px 15px;
+    }
+
+}
+
+
+/* =====================================================
+   VERY SMALL PHONES
+   0px - 380px
+===================================================== */
+
+@media (max-width: 380px) {
+
+    body {
+        padding: 8px;
+    }
+
+    .navbar {
+        padding: 13px 8px;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .nav-links {
+        gap: 7px;
+    }
+
+    .nav-links a {
+        font-size: 11px;
+    }
+
+    .hero {
+        padding: 45px 12px;
+    }
+
+    .hero-photo {
+        width: 115px;
+        height: 115px;
+    }
+
+    .hero h1 {
+        font-size: 31px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .about h2 {
+        font-size: 23px;
+    }
+
+    .about p {
+        font-size: 15px;
+    }
+
+    .price {
+        font-size: 25px;
+    }
+
+    .projects-section h2 {
+        font-size: 27px;
+    }
+
+}
